@@ -1,0 +1,9 @@
+GIT_PS1_SHOWDIRTYSTATE=1     #... untagged(*) and staged(+) changes
+GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
+GIT_PS1_SHOWUNTRACKEDFILES=1 #... untracked files(%)
+
+# A few greek letters
+LETTERS=(α β γ Δ ε ζ η θ ι κ λ μ ν Ξ ξ π ρ Σ σ ς τ υ Φ φ χ Ψ ψ Ω ω)
+GREEK=λ #${LETTERS[$((RANDOM%${#LETTERS[*]}))]}
+
+PS1="${BRIGHT_GREEN}${GREEK} ${YELLOW}\w${BRIGHT_BLUE}"'`__git_ps1`'"${YELLOW} ∴${RESET} \n$ "
